@@ -1,6 +1,6 @@
 const Exercise = require("../models/exercise_model");
 
-const logExercise = async(req, res) => {
+const createWorkout = async(req, res) => {
     const { exercise_name, sets, reps, weight } = req.body;
 
     try {
@@ -17,4 +17,6 @@ const logExercise = async(req, res) => {
     }
 };
 
-module.exports = logExercise;
+module.exports = {
+    createWorkout
+};

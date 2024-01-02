@@ -1,7 +1,11 @@
-const logExercise = require("../controllers/post_controller");
+const express = require("express");
+const {
+    createWorkout
+} = require("../controllers/post_controller");
 
-const postRoutes = (app) => {
-    app.post("/log", logExercise);
-};
+const router = express.Router();
 
-module.exports = postRoutes;
+// Create a new workout
+router.post("/createWorkout", createWorkout);
+
+module.exports = router;

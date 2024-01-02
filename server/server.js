@@ -15,8 +15,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-postRoutes(app);
-getRoutes(app);
+app.use("/api/workouts", postRoutes);
+app.use("/api/workouts", getRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

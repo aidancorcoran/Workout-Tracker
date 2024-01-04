@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 
 // Pages & Components
 import Navbar from "./components/Navbar"
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar>
+        <Navbar />
           <div className="pages">
             <Routes>
               <Route
@@ -17,7 +17,6 @@ function App() {
               />
             </Routes>
           </div>
-        </Navbar>
       </BrowserRouter>
     </div>
   );
